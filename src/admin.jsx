@@ -36,7 +36,6 @@ function Admin() {
 
     if (response.status === 200) {
       setReload(!reload);
-      // Clear input fields after successful creation
       setName('');
       setLastName('');
       setPosition('');
@@ -94,10 +93,10 @@ function Admin() {
         <tbody>
           {members.map((member) => (
             <tr key={member.id}>
-              <td className="w-2/6 h-10 border border-slate-700">{member.name}</td>
-              <td className="w-2/6 h-10 border border-slate-700">{member.lastname}</td>
-              <td className="w-2/6 h-10 border border-slate-700">{member.position}</td>
-              <td className="w-2/6 h-10 border border-slate-700">
+              <td >{member.name}</td>
+              <td >{member.lastname}</td>
+              <td >{member.position}</td>
+              <td>
                 <button onClick={() => deleteData(member.id)}>Delete</button>
               </td>
             </tr>
