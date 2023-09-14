@@ -27,3 +27,17 @@ input{
   border-radius: 2px;
   background-color: white;
 }
+table{
+  width: 100%;
+}
+table th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #8ba2ef;
+  color: rgb(0, 0, 0);
+}
+table td{
+  border: 1px solid #ddd;
+  padding: 8px;
+}

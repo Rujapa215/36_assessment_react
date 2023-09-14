@@ -26,7 +26,7 @@ function User() {
   return (
     <>
       <Nav />
-      <div>
+      <div style={{textAlign:'center', width:'50%', height:'Auto', margin:'auto', paddingTop:'25px'}}>
         <h2>Generation Thailand</h2>
         <h2>User Home section</h2>
         <Button_home />
