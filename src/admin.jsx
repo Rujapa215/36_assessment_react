@@ -42,9 +42,9 @@ function Admin() {
     }
   };
 
-  const deleteData = async (name) => {
+  const deleteData = async (id) => {
     const response = await axios.delete(
-      `https://jsd5-mock-backend.onrender.com//member/${name}`
+      `https://jsd5-mock-backend.onrender.com/member/${id}`
     );
 
     if (response.status === 200) {
@@ -109,7 +109,7 @@ function Admin() {
         padding:'8px 16px',
         backgroundColor:'white', 
         textAlign:'center'
-        }}  onClick={(e) => deleteData(e.target.value)}>Delete</button>
+        }}  onClick={() => deleteData(member.id)}>Delete</button>
               </td>
             </tr>
           ))}
