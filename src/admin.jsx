@@ -42,9 +42,9 @@ function Admin() {
     }
   };
 
-  const deleteData = async (id) => {
+  const deleteData = async (name) => {
     const response = await axios.delete(
-      `https://jsd5-mock-backend.onrender.com/members/${id}`
+      `https://jsd5-mock-backend.onrender.com//member/${name}`
     );
 
     if (response.status === 200) {
@@ -80,7 +80,13 @@ function Admin() {
         onChange={(e) => setPosition(e.target.value)}
         placeholder="Position"
       />
-      <button onClick={createData}>Save</button>
+      <button style={{
+       margin:'20px',
+        borderRadius:'4px',
+        padding:'8px 16px',
+        backgroundColor:'white', 
+        textAlign:'center'
+        }}  onClick={createData}>Save</button>
 
       <table>
         <thead>
@@ -97,7 +103,13 @@ function Admin() {
               <td >{member.lastname}</td>
               <td >{member.position}</td>
               <td>
-                <button onClick={() => deleteData(member.id)}>Delete</button>
+                <button style={{
+       margin:'20px',
+        borderRadius:'4px',
+        padding:'8px 16px',
+        backgroundColor:'white', 
+        textAlign:'center'
+        }}  onClick={(e) => deleteData(e.target.value)}>Delete</button>
               </td>
             </tr>
           ))}
